@@ -6,7 +6,7 @@ import pandas as pd
 
 class CadFuncionario:
     
-    def tabela_funcionarios(self):
+    def criar_tabela_de_funcionarios(self):
         self.tabela = pd.DataFrame(columns = ['nome','endereco', 'metodo', 'tipo',
                                      'sindicalista', 'salarioHora', 'salarioFixo', 'percentual',
                                     'salario','taxaFixa'])
@@ -27,30 +27,22 @@ class CadFuncionario:
         self.informacao = pd.Series(dicionario)
         return
 
-    def inserir_tabela(self):
+    def inserir_funcionario_na_tabela(self):
         self.dados()
         self.tabela = self.tabela.append(self.informacao, ignore_index=True)
         return
 
-    def remover_funcionario(self, _id):
-        if _id < len(self.tabela.index):
-            self.tabela = self.tabela.drop(_id)
-        else:
-            print("ERRO! Funcionario não encontrado.")
+    def remover_funcionario_da_tabela(self, _id):
+        self.tabela = self.tabela.drop(_id)
         return
 
-    def modificar_valor(self, _id, coluna, valor):
-        if _id < len(self.tabela.index):
-            self.tabela.at[_id, coluna] = valor
-        else:
-            print("ERRO! Funcionario não encontrado.")
+    def modificar_dados_da_tabela(self, _id, coluna, valor):
+        self.tabela.at[_id, coluna] = valor
         return
 
     def imprimir_dados(self, _id):
-        if _id < len(self.tabela.index):
-            print(self.tabela.loc[_id])
-        else:
-            print("ERRO! Funcionario não encontrado.")
+        print(self.tabela.loc[_id])
+
 
 
 # Para usar essa Class:
@@ -60,19 +52,19 @@ class CadFuncionario:
 # ```
 # Criar tabela
 # ```sh
-# df_funcionarios.tabela_funcionarios()
+# df_funcionarios.criar_tabela_de_funcionarios()
 # ```
 # Inserir Funcionario
 # ```sh
-# df_funcionarios.inserir_tabela()
+# df_funcionarios.inserir_funcionario_na_tabela()
 # ```
 # Remover Funcionario
 # ```sh
-# df_funcionarios.remover_funcionario(Id_do_funcionario)
+# df_funcionarios.remover_funcionario_da_tabela(Id_do_funcionario)
 # ```
 # Modificar Dados do Funcionario
 # ```sh
-# df_funcionarios.modificar_valor(Id_do_funcionario, 'Coluna para modificar', 'valor')
+# df_funcionarios.modificar_dados_da_tabela(Id_do_funcionario, 'Coluna para modificar', 'valor')
 # ```
 # Imprimir Dados de um Funcionario
 # ```sh
