@@ -3,6 +3,7 @@
 
 from datetime import datetime
 import pandas as pd
+import numpy as np
 
 class CadFuncionario:
     
@@ -33,17 +34,25 @@ class CadFuncionario:
         return
 
     def remover_funcionario_da_tabela(self, _id):
-        self.tabela = self.tabela.drop(_id)
+        if _id in np.array(self.tabela.index):
+            self.tabela = self.tabela.drop(_id)
+        else:
+            print('Erro - Funcionario nao encontrado')
         return
 
     def modificar_dados_da_tabela(self, _id, coluna, valor):
-        self.tabela.at[_id, coluna] = valor
+        if _id in np.array(self.tabela.index):
+            self.tabela.at[_id, coluna] = valor
+        else:
+            print('Erro - Funcionario nao encontrado')
         return
 
     def imprimir_dados(self, _id):
-        print(self.tabela.loc[_id])
-
-
+        if _id in np.array(self.tabela.index):
+            print(self.tabela.loc[_id])
+        else:
+            print('Erro - Funcionario nao encontrado')
+        return
 
 # Para usar essa Class:
 # 
