@@ -18,6 +18,7 @@ class SistemaCadastro:
     def remover_funcionario_da_tabela(self, _id):
         if _id in np.array(self.tabela.index):
             self.tabela = self.tabela.drop(_id)
+            self.agrupartipo()
         else:
             print('Erro - Funcionario nao encontrado')
 
