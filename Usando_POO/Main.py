@@ -1,18 +1,16 @@
-from Empregado import Empregado
-from Horista import Horista
-from Comissionado import Comissionado
-from Assalariado import Assalariado
-from ConfigCadastro import addEmpregado, deletarEmpregado
-import pandas as pd
+# This is a sample Python script.
 
-tabela = pd.DataFrame()
-tabela = addEmpregado(tabela)
-tabela = addEmpregado(tabela)
-tabela = addEmpregado(tabela)
-tabela = addEmpregado(tabela)
-tabela = addEmpregado(tabela)
-tabela = addEmpregado(tabela)
-print('\n\n',tabela)
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-tabela = deletarEmpregado(tabela, 1)
-print('\n\n',tabela)
+
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print_hi('PyCharm')
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
