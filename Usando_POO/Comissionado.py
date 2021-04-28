@@ -2,8 +2,8 @@ from Empregado import Empregado
 
 class Comissionado(Empregado):
 
-    def __init__(self, nome, endereco, filiado, porcentagem, vendas):
-        Empregado.__init__(self, nome, endereco, filiado)
+    def __init__(self, nome, endereco, filiado, tipo, porcentagem, vendas):
+        super().__init__(nome, endereco, filiado, tipo)
         self._vendas = vendas
         self._porcentagem = porcentagem
 
@@ -12,6 +12,3 @@ class Comissionado(Empregado):
 
     def mudarPorcentagem(self, porcentagem):
         self._porcentagem = porcentagem
-
-    def printComissionado(self):
-        print(self._nome, self._endereco, self._filiado, self._vendas, self._porcentagem)

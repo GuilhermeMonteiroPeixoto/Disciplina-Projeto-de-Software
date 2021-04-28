@@ -1,0 +1,33 @@
+Guilherme Monteiro
+Rua Radialista H. Amorim
+N
+Assalariado
+6500
+Nairobi Cenna
+Rua Acaua
+S
+Comissionado
+30
+10
+Kenya Ferreira
+Rua Joao Alencar
+N
+Horista
+30
+Tanzania Almeida
+Rua II Joao
+S
+Horista
+35
+Rio Nilo
+Rua Acaua
+S
+Comissionado
+50
+20
+Joana Dark
+Rua Acaua
+N
+Comissionado
+35
+15
