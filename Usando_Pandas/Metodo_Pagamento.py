@@ -1,4 +1,5 @@
 import pandas as pd
+from datetime import datetime, timedelta
 
 Metodo_Pagamento = pd.DataFrame(columns=['_id','Forma','Valor'])
 

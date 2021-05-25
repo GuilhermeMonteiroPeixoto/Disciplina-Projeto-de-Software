@@ -17,7 +17,7 @@ def Add():
 
 def Remove():
     num_id = str(input('ID do usuario: '))
-    CE.Cad_Funcionario, Horista.Func_Horista, Assalariado.Func_Assalariado, Comissionado.Func_Comissionado, TS.Taxas_Servicos, CP.Cartao_de_Ponto, RS.Resultado_Vendas, MP.Metodo_Pagamento, Deposito.Deposito, AP.Agenda_Pagamento = CE.removerEmpregado(num_id ,CE.Cad_Funcionario, Horista.Func_Horista, Assalariado.Func_Assalariado, Comissionado.Func_Comissionado, TS.Taxas_Servicos, CP.Cartao_de_Ponto, RS.Resultado_Vendas, MP.Metodo_Pagamento, Deposito.Deposito, AP.Agenda_Pagamento)
+    CE.Cad_Funcionario, Horista.Func_Horista, Assalariado.Func_Assalariado, Comissionado.Func_Comissionado, TS.Taxas_Servicos, CP.Cartao_de_Ponto, RV.Resultado_Vendas, MP.Metodo_Pagamento, Deposito.Deposito, AP.Agenda_Pagamento = CE.removerEmpregado(num_id ,CE.Cad_Funcionario, Horista.Func_Horista, Assalariado.Func_Assalariado, Comissionado.Func_Comissionado, TS.Taxas_Servicos, CP.Cartao_de_Ponto, RV.Resultado_Vendas, MP.Metodo_Pagamento, Deposito.Deposito, AP.Agenda_Pagamento)
 
 def AddCartao():
     num_id = str(input('ID do usuario: '))
@@ -55,8 +55,8 @@ def ChangeMetodoPagamento():
 
 def MostrarTabela():
     print(CE.Cad_Funcionario)
-    print(AP.Agenta_Pagamento)
-    print(MP.Metodo_Pagamento)
+    #print(AP.Agenta_Pagamento)
+    #print(MP.Metodo_Pagamento)
 
 def Folha():
     folhinha = AP.RodarFolha(AP.Agenda_Pagamento, MP.Metodo_Pagamento, Deposito.Deposito)
@@ -130,3 +130,6 @@ def Menu():
     if opcao == 8:
         MostrarTabela()
         input('Enter - para continuar')
+
+while(1==1):
+    Menu()
