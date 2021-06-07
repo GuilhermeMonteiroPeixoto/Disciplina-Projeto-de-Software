@@ -3,8 +3,31 @@
 ## _Sistema de Folha de Pagamento_
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django)
 ---------
+To run the system:
+```
+C:\Users\...\payroll>python manage.py runserver
+
+>
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 07, 2021 - 10:26:57
+Django version 3.2, using settings 'payroll.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+```
+Go to ```http://127.0.0.1:8000/``` and you will be directed to the login page. Only authorized employees can run the payroll and have access to the Employee CRUD.
+
 ![screenshot](Img/login.png)
-![screenshot](Img/app_employee.png)
+
+To access the system:
+```
+Usuário: admin
+Senha: 123456
+```
+The payroll system using Django is not complete, so it only has the function of registering, modifying and removing employees. For this, we use SQLite3.
+
 ![screenshot](Img/adm_sistema.png)
 ---------
  O objetivo do projeto é construir um sistema de folha de pagamento. O sistema consiste do gerenciamento de pagamentos dos empregados de uma empresa. Além disso, o sistema deve gerenciar os dados destes empregados, a exemplo os cartões de pontos. Empregados devem receber o salário no momento correto, usando o método que eles preferem, obedecendo várias taxas e impostos deduzidos do salário.
