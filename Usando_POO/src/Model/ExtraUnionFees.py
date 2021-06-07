@@ -5,10 +5,19 @@ class ExtraUnionFees:
         self._description = description
         self._value = value
 
-    def __init__(self, name, description, value):
-        self._name = name
-        self._description = description
-        self._value = value
+    def __iter__(self):
+        yield self._uid
+        yield self._name
+        yield self._description
+        yield self._value
+
+    @classmethod
+    def columns_(cls):
+        return['Id', 'Name', 'Description', 'Value']
+
+    @staticmethod
+    def types_cast_():
+        return[True, False, False, True]
 
     @property
     def uid(self):

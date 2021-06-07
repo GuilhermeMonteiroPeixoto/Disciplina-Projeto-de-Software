@@ -4,9 +4,17 @@ class Company:
         self._name = name
         self._employee_fks = employee_fks
 
-    def __init__(self, name, employee_fks):
-        self._name = name
-        self._employee_fks = employee_fks
+    def __iter__(self):
+        yield self._uid
+        yield self._name
+
+    @classmethod
+    def columns(cls):
+        return ['Id', 'Name']
+
+    @staticmethod
+    def types_cast_():
+        return[True, False]
 
     @property
     def uid(self):
